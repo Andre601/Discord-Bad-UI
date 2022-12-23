@@ -2,14 +2,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-
- <title>{{ site.title }}</title>
+    
+    {% if page.tag-name %}
+      <title>#{{ page.tag-name }} - {{ site.title }}</title>
+      
+      <meta property="og:title" content="#{{ page.tag-name }} - {{ site.title }}" />
+      <meta name="twitter:title" content="#{{ page.tag-name }} - {{ site.title }}" />
+      
+      <meta itemprop="name" content="#{{ page.tag-name }} - {{ site.title }}">
+    {% else %}
+      <title>{{ site.title }}</title>
+      
+      <meta property="og:title" content="{{ site.title }}" />
+      <meta name="twitter:title" content="{{ site.title }}" />
+      
+      <meta itemprop="name" content="{{ site.title }}">
+    {% endif %}
+    
+    {% if page.tag-description %}
+      <meta property="og:description" content="{{ page.tag-description }}" />
+      <meta name="twitter:description" content="{{ page.tag-description }}" />
+    {% else %}
+      <meta property="og:description" content="{{ site.description }}" />
+      <meta name="twitter:description" content="{{ site.description }}" />
+    {% endif %}
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{site.baseurl }}{{ page.url }}" />
+    <meta property="og:image" content="{{ site.baseurl }}/assets/images/favicons/android-chrome-512x512.png" />
+    <meta property="og:image:type" content="image/png" />
     
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 
-    <meta name="description" content="{{ site.description }}">
     <meta name="robots" content="index,follow">
-    <meta itemprop="name" content="{{ site.title }}">
     <meta name="theme-color" content="{{ site.color }}">
 
     <link href="{{ site.baseurl }}/assets/css/materialize.min.css" rel="stylesheet">
