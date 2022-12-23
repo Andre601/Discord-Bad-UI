@@ -1,13 +1,22 @@
-# Discord's Bad UI-Designs
+# discordhasgoodui.design
+> Just FYI: The Domain is meant to be in a sarcastic tone...
 
-Over the past years has Discord tried many different UI designs. Some good, others mediocre and others extremely bad.
-
-This site aims to list those bad design decisions from the past.
+This is a small website I've made to list all the past and current decisions made by Discord that make the UI the god awful thing it sometimes is. Be it broken textures, wrong padding, weird theme choises, etc.
 
 ## Disclaimer
+This is not meant as a personal attack against Discord. It's meant as a joke and to point out the flawed designs they often make (See Discord rebranding last year).
 
-Please don't take this too seriously. This is meant as a joke-project to make some fun of the weird designing decisions made by the frontend-people at Discord Inc.
+Please don't attack Discord for this. Instead suggest improvements to their design, because it's better to provide good feedback than simple hate.
 
-## Submit ideas
+## Submit entries
+The [issue tracker](/issues) is used for submitting entries.  
+Note that you don't have to only submit current/new design fails. Ones made in the past can also be submitted, will be added (when accepted) and automatically inserted into the page.
 
-Please use the [Issue Tracker](https://github.com/Andre601/Discord-Bad-UI/issues) to suggest new ideas.
+## Credits
+This page uses the [Jekyll-timeline theme][theme] from [lukas-h]. Smaller modifications have been made to the design, but it is otherwise the same.
+
+The website is inspired by the "[Twitter is Going Great!][tigg]" Website, go check them out!
+
+[theme]: https://github.com/lukas-h/jekyll-timeline
+[lukas-h]: https://github.com/lukas-h
+[tigg]: https://twitterisgoinggreat.com
