@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths-ignore:
-      - './.github/ISSUE_TEMPLATE/**'
+      - '.github/ISSUE_TEMPLATE/**'
 
 jobs:
   deploy:
