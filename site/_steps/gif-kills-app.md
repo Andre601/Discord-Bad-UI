@@ -1,6 +1,7 @@
 ---
 title: Android app gets slowed down by gifs
 date: 2022-12-17 00:00:00 0000
+submitter: Andre601
 ---
 
 In a more recent update of the Android app can certain gifs cause the app to slow down (lag) significantly, while also [making the phone heat up][app-issue].

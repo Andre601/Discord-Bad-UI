@@ -1,6 +1,7 @@
 ---
 title: Discord's new Brand redesign
 date: 2021-05-13 00:00:00 0000
+submitter: Andre601
 ---
 
 On the 13th of may did [Discord announce their new redesign][blog-post], which included changes to a lot of things, such as their Logo called "clyde" and even the Watermark.  
