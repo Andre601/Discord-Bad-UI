@@ -6,46 +6,12 @@ layout: default
   <div class="grid-container">
     <div class="grid-wrapper--header">
       <div class="grid-child">
-        <h1>{{ site.title }}</h1>
+        <h1>Tags</h1>
       </div>
       <div class="grid-child">
-        {{ site.subtitles | sample }}
-      </div>
-      <div class="grid-child">
-        <a class="button" href="https://github.com/Andre601/Discord-Bad-UI/issues" target="_blank" rel="nofollow noopener noreferrer">Submit an entry</a>
+        <a class="button" href="/">Back to main page</a>
       </div>
     </div>
-  </div>
-</div>
-<div class="container row">
-  {% assign steps = site.steps | sort: 'date' %}
-  {% for step in steps reversed %}
-  <div class="item">
-    <i class="vertical-line"></i>
-    <h2 class="item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y' }}{% endif %}</h2>
-    <div class="card-panel">
-      <h3 class="card-title">
-        {{ step.title }}
-      </h3>
-      <div class="card-author">
-        Submitted by {{ step.submitter }}
-      </div>
-      <hr>
-      <p>
-        {{ step.content }}
-      </p>
-      <p>
-        {% assign tags = step.tags %}
-        {% for tag in tags -%}
-          <a href="{{ site.baseurl }}/tags/{{ tag }}">#{{ tag }}</a>{% unless forloop.last %} | {% endunless -%}
-        {% endfor %}
-      </p>
-    </div>
-  </div>
-  {% endfor %}
-  <div class="last-item">
-    <i class="vertical-line"></i>
-        
   </div>
 </div>
 <footer class="header-footer-container">

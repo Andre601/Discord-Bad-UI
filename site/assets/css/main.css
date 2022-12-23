@@ -1,3 +1,10 @@
+:root {
+    --button-border-color: rgba(88,101,242,.5);
+    --button-border-color--selected: rgba(88,101,242,1);
+    --button-bg-color: rgba(88,101,242,.1);
+    --button-bg-color--selected: rgba(88,101,242,1);
+}
+
 body {
   font-size:20px;
   font-family:'Lato',sans-serif;
@@ -71,35 +78,53 @@ h1,h2,h3,h4,h5,h6 {
     color: hsla(0,0%,100%,.3);
 }
 
-.footer-container {
+.header-footer-container {
     text-align:center;
     background-color:#36393f;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-.footer-grid--container {
-    padding: 1rem;
+a.button {
+    background-color: var(--button-bg-color);
+    border: .1rem solid;
+    border-color: var(--button-border-color);
+    border-radius: .1rem;
+    color: #FFFFFF;
+    padding: .625em 2em;
+    transition: background-color 125ms, border-color 125ms;
 }
 
-.footer-grid--wrapper {
+a.button:hover {
+    background-color: var(--button-bg-color--selected);
+    border-color: var(--button-border-color--selected);
+}
+
+/* Grid stuff */
+.grid-container {
+    padding: .5rem;
+}
+
+.grid-wrapper--header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+}
+
+.grid-wrapper--footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
-  .footer-grid--wrapper {
+  .grid-wrapper--footer {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
   }
-
-  .footer-grid--align-left {
-      text-align: center;
-  }
 }
 
-.footer-grid--child {
+.grid-child {
     padding: 0.5rem;
 }
