@@ -21,6 +21,6 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 description: ...how else would you explain the app ignoring a11y settings?
-baseurl: "/design"
+baseurl: ""
 url: https://discordhasgoodui.design
 color: "#202225"
