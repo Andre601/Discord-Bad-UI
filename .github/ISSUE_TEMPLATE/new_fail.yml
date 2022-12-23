@@ -1,0 +1,51 @@
+name: Submit a new Design Fail
+description: Use this template to report a new design fail that Discord has made.
+
+assignees:
+  - Andre601
+
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        ## Welcome!
+        You can use this issue form to submit new UI design fails made by Discord.  
+        Please only submit **one entry per issue**.
+  - type: input
+    attributes:
+      label: Date of find
+      description: |-
+        Provide the date when either Discord implemented this or where you found this issue.  
+        If possible, include links to blog posts or similar in the "content" field further down.
+        
+        **Note:** The format has to be `YYYY-MM-DD HH:mm:ss` (i.e. `2022-12-23 00:00:00`)
+      placeholder: '2022-12-23 00:00:00'
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Title
+      description: |-
+        The title that should be displayed.  
+        Keep it civil! No insults, no targeted hate or anything like that.
+      placeholder: 'Discord pushed a change that ...'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Content
+      description: |-
+        The actual text that should be included.  
+        Markdown is used for formatting in the website, so feel free to use it here too (i.e. for embedded links).
+        
+        If you can, provide links and images to sources such as blog posts or changelogs, that proof the mentioned UI design fail.
+      placeholder: 'Discord [has posted an update](https://discord.com/blog/) which included ...'
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Name
+      description: Provide a name here that should be mentioned in `Submitted by <name>`
+      placeholder: 'User'
+    validations:
+      required: true
