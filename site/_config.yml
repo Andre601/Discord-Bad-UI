@@ -1,6 +1,5 @@
----
-title: Composers
-timezone: Europe/Berlin
+title: Discord has good UI Design
+timezone: Europe/Zurich
 collections:
   posts:
     title: Posts
@@ -21,7 +20,7 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 lsi: false
-description: your resume
-baseurl: "/jekyll-timeline"
-url: http://himsel.me
-color: "#f2f2f2"
+description: ...how else would you explain the app ignoring a11y settings?
+baseurl: "/"
+url: https://discordhasgoodui.design
+color: "#202225"
