@@ -67,6 +67,10 @@ h1,h2,h3,h4,h5,h6 {
   position:relative;
 }
 
+.card-author {
+    color: hsla(0,0%,100%,.3);
+}
+
 .footer-container {
     text-align:center;
     background-color:#36393f;

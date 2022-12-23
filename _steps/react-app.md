@@ -1,6 +1,7 @@
 ---
 title: Discord changes Android App from Java/Kotlin to react
 date: 2022-08-24 00:00:00 0000
+submitter: Andre601
 ---
 
 Discord has changed their Android app from being made in Java/Kotlin to be made with React.  
