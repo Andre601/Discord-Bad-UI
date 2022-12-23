@@ -10,6 +10,9 @@ collections:
   uploads:
     title: Uploads
     output: true
+  tags:
+    title: Tags
+    output: true
 defaults:
 - scope:
     path: ''
@@ -24,3 +27,11 @@ description: ...how else would you explain the app ignoring a11y settings?
 baseurl: ""
 url: https://discordhasgoodui.design
 color: "#202225"
+
+#plugins:
+#  - jekyll-tagging
+
+subtitles:
+  - ...how else would you explain the app ignoring a11y settings?
+  - ...because there isn't enough nightmare fuel on the Internet already.
+  - ...as long as you don't compare it to any other site.
