@@ -25,7 +25,7 @@ highlighter: rouge
 lsi: false
 description: ...how else would you explain the app ignoring a11y settings?
 baseurl: ""
-url: https://discordhasgoodui.design
+url: https://discord.hasgoodui.design
 color: "#202225"
 
 #plugins:
