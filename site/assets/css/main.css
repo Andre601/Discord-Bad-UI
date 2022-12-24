@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .item .card-panel {
   margin:0;
-  margin:2rem 0 0 3rem;
+  margin:-3rem 0 0 3rem;
 }
 
 .item-date {
