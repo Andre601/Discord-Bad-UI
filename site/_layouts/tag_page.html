@@ -8,13 +8,12 @@ layout: default
     {% if step.tags contains page.tag-name %}
     <div class="item">
       <i class="vertical-line"></i>
-      <h2 class="item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y' }}{% endif %}</h2>
       <div class="card-panel">
         <h3 class="card-title">
           {{ step.title }}
         </h3>
         <div class="card-author">
-          Submitted by {{ step.submitter }}
+          Submitted by {{ step.submitter }} | {{ step.date | date: '%d/%m/%Y' }}
         </div>
         <hr>
         <p>
@@ -24,7 +23,7 @@ layout: default
     </div>
     {% endif %}
   {% endfor %}
-    <div class="last-item">
-      <i class="vertical-line"></i>
-    </div>
+  <div class="last-item">
+    <i class="vertical-line"></i>
+  </div>
 </div>
