@@ -10,6 +10,13 @@
       <meta name="twitter:title" content="#{{ page.tag-name }} - {{ site.title }}" />
       
       <meta itemprop="name" content="#{{ page.tag-name }} - {{ site.title }}">
+    {% elsif page.title %}
+      <title>#{{ page.title }} - {{ site.title }}</title>
+      
+      <meta property="og:title" content="#{{ page.title }} - {{ site.title }}" />
+      <meta name="twitter:title" content="#{{ page.title }} - {{ site.title }}" />
+      
+      <meta itemprop="name" content="#{{ page.title }} - {{ site.title }}">
     {% else %}
       <title>{{ site.title }}</title>
       
@@ -22,6 +29,9 @@
     {% if page.tag-description %}
       <meta property="og:description" content="{{ page.tag-description }}" />
       <meta name="twitter:description" content="{{ page.tag-description }}" />
+    {% elsif page.description %}
+      <meta property="og:description" content="{{ page.description }}" />
+      <meta name="twitter:description" content="{{ page.description }}" />
     {% else %}
       <meta property="og:description" content="{{ site.description }}" />
       <meta name="twitter:description" content="{{ site.description }}" />
@@ -36,11 +46,9 @@
 
     <meta name="robots" content="index,follow">
     <meta name="theme-color" content="{{ site.color }}">
-
-    <link href="{{ site.baseurl }}/assets/css/materialize.min.css" rel="stylesheet">
+    
     <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
-    <style>body{background:{{ site.color }};}</style>
     
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/images/favicons/favicon-32x32.png">
