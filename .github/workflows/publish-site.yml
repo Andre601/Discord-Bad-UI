@@ -22,5 +22,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          cname: discordhasgoodui.design
+          cname: discord.hasgoodui.design
           enable_jekyll: true
