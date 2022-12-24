@@ -8,6 +8,26 @@ layout: compress
 {% include head.html %}
 
 <body>
+<div class="header-footer-container">
+  <div class="grid-container">
+    <div class="grid-wrapper--header">
+      <div class="grid-child">
+        <h1>{% if page.tag-name %}#{{ page.tag-name }}{% else %}{{ page.title }}{% endif %}</h1>
+      </div>
+      <div class="grid-child">
+        {% if page.tag-description %}{{ page.tag-description }}{% else %}{{ site.subtitles }}{% endif %}
+      </div>
+      <div class="grid-child">
+        {% if page.tag-name %}
+          <a class="button" href="/">Back to main page</a>
+        {% else %}
+          <a class="button" href="https://github.com/hasgoodui-design/{{ site.github-repo }}/issues" target="_blank" rel="nofollow noopener noreferrer">Submit an Entry</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 {{ content }}
+{% include footer.html %}
 </body>
 </html>
