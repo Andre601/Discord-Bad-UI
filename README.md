@@ -1,12 +1,10 @@
-# discordhasgoodui.design
+# discord.hasgoodui.design
 > Just FYI: The Domain is meant to be in a sarcastic tone...
 
-This is a small website I've made to list all the past and current decisions made by Discord that make the UI the god awful thing it sometimes is. Be it broken textures, wrong padding, weird theme choises, etc.
+Website to list the past and current UI design decisions made by Discord that can at the very least be considered questionable.
 
 ## Disclaimer
-This is not meant as a personal attack against Discord. It's meant as a joke and to point out the flawed designs they often make (See Discord rebranding last year).
-
-Please don't attack Discord for this. Instead suggest improvements to their design, because it's better to provide good feedback than simple hate.
+This is a project made to have fun. It's not meant as a personal attack agains Discord Inc or anyone else.
 
 ## Submit entries
 The [issue tracker](/issues) is used for submitting entries.  
