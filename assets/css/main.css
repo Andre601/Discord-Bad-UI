@@ -65,7 +65,8 @@ footer {
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap-left: 1rem;
+    gap-right: 1rem;
     
     background-color: var(--footer-bg-color);
     text-align: unset;
@@ -81,10 +82,6 @@ footer {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-}
-
-footer h4 {
-    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -114,6 +111,12 @@ h4 {
     font-size: 2.28rem;
     line-height: 110%;
     margin: 1.14rem 0 .912rem 0;
+}
+
+h5 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: .82rem 0 .656rem 0;
 }
 
 img {
@@ -149,9 +152,19 @@ a.button {
     transition: background-color 125ms, border-color 125ms;
 }
 
+a.button svg {
+    fill: #FFFFFF;
+    vertical-align: baseline;
+}
+
 a.button:hover {
     background-color: var(--button-bg-color--selected);
     border-color: var(--button-border-color--selected);
+}
+
+a svg {
+    fill: var(--link-color);
+    vertical-align: baseline;
 }
 
 ul:not(.browser-default) {
@@ -163,10 +176,16 @@ ul:not(.browser-default) li {
     list-style-type: inherit;
 }
 
+svg {
+    fill: var(--font-color);
+    vertical-align: middle;
+}
+
 /* Classes */
 
 .grid-child {
-    padding: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .item {

@@ -1,31 +1,52 @@
 <footer>
   <div class="grid-child">
-    <h4>About</h4>
+    <h5>About</h5>
     <p>
-      Site listing Bad UI designs made by Discord.<br>
-      Inspired by <a href="https://twitterisgoinggreat.com" target="_blank" rel="nofollow noopener noreferrer">twitterisgoinggreat.com</a>.
-    </p>
-    <p>
-      Made and maintained by <a href="https://andre601.ch" target="_blank" rel="nofollow noopener noreferrer">Andre_601</a>.
-    </p>
-    <p>
-      Website made using <a href="https://jekyllrb.com" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a> and the <a href="" target="_blank" rel="nofollow noopener noreferrer">Jekyll Timelines theme</a>.
+      {{ site.footer-description }}
     </p>
   </div>
   <div class="grid-child">
-    <h4>Links</h4>
+    <h5>Links</h5>
     <ul>
-      <li><a href="https://github.com/hasgoodui-design/{{ site.github-repo }}" target="_blank" rel="nofollow noopener noreferrer">Source Code</a></li>
-      <li><a href="https://github.com/hasgoodui-design/{{ site.github-repo }}/issues" target="_blank" rel="nofollow noopener noreferrer">Submit an entry</a></li>
+      <li><a href="https://github.com/hasgoodui-design/{{ site.github-repo }}" target="_blank" rel="nofollow noopener noreferrer">{% octicon mark-github height:16 %} Source Code</a></li>
+      <li><a href="https://github.com/hasgoodui-design/{{ site.github-repo }}/issues" target="_blank" rel="nofollow noopener noreferrer">{% octicon pencil height:16 %} Submit an entry</a></li>
     </ul>
   </div>
   <div class="grid-child">
-    <h4>Tags</h4>
+    <h5>Tags</h5>
     {% include tags-list.html %}
     <ul>
     {% for tag in tags %}
       <li><a href="{{ site.baseurl }}/tags/{{ tag }}">#{{ tag }}</a></li>
     {% endfor %}
     </ul>
+  </div>
+  <div class="grid-child">
+    <h5>Maintainers</h5>
+    <p>
+      {% assign authors = site.authors %}
+      
+      <ul>
+      {% for author in authors %}
+        <li>
+        {{ author.name }}
+        
+        {% if author.website %}
+          | <a href="{{ author.website }}" target="_blank" rel="nofollow noopener noreferrer" title="Visit the website of {{ author.name }}">{% octicon browser height:16 %}</a>
+        {% endif %}
+        
+        {% if author.github %}
+          | <a href="https://github.com/{{ author.github }}" target="_blank" rel="nofollow noopener noreferrer" title="Visit the GitHub Profile of {{ author.name }}">{% octicon mark-github height:16 %}</a>
+        {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    </p>
+  </div>
+  <div class="grid-child">
+    <h5>Credits</h5>
+    <p>
+      Website made using <a href="https://jekyllrb.com" target="_blank" rel="nofollow noopener noreferrer">Jekyll</a> and the <a href="https://github.com/lukas-h/jekyll-timeline" target="_blank" rel="nofollow noopener noreferrer">Jekyll Timeline theme</a>.
+    </p>
   </div>
 </footer>

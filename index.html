@@ -20,6 +20,10 @@ layout: default
     <p>
       {% assign tags = step.tags %}
       {% for tag in tags -%}
+        {% if forloop.first %}
+          {% octicon tag height:24 %}
+        {% endif %}
+      
         <a href="{{ site.baseurl }}/tags/{{ tag }}">#{{ tag }}</a>{% unless forloop.last %} | {% endunless -%}
       {% endfor %}
     </p>
