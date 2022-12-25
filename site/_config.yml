@@ -13,6 +13,9 @@ collections:
   tags:
     title: Tags
     output: true
+  authors:
+    title: Authors
+    output: false
 defaults:
 - scope:
     path: ''
@@ -37,3 +40,12 @@ subtitles:
   - ...as long as you don't compare it to any other site.
 
 github-repo: 'Discord'
+
+footer-description: |-
+  Website listing the bad UI designs made by <a href="https://discord.com" target="_blank" rel="nofollow noopener noreferrer">Discord Inc.</a><br>
+  Concept inspired by <a href="https://twitterisgoinggreat.com" target="_blank" rel="nofollow noopener noreferrer">Twitter is going great</a>.
+
+plugins:
+  - github-pages
+  - jekyll-octicons
+  - tzinfo-data
