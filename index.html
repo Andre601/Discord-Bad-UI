@@ -7,8 +7,8 @@ layout: default
 <div class="item">
   <i class="vertical-line"></i>
   <div class="card-panel">
-    <h3 class="card-title">
-      {{ step.title }}
+    <h3 class="card-title" id="{{ step.slug }}">
+      {{ step.title }} <a href="#{{ step.slug }}">{% octicon link height:24 %}</a>
     </h3>
     <div class="card-author">
       Submitted by {{ step.submitter }} | {{ step.date | date: '%d/%m/%Y'}}
