@@ -26,13 +26,10 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 lsi: false
-description: ...how else would you explain the app ignoring a11y settings?
+description: 'A site listing Discord''s "good" UI designs.'
 baseurl: ""
 url: https://discord.hasgoodui.design
 color: "#202225"
-
-#plugins:
-#  - jekyll-tagging
 
 subtitles:
   - ...how else would you explain the app ignoring a11y settings?
