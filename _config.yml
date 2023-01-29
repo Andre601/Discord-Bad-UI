@@ -26,7 +26,7 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 lsi: false
-description: 'A site listing Discord''s \"good\" UI designs.'
+description: 'A site listing Discord''s &quot;good&quot; UI designs.'
 baseurl: ""
 url: https://discord.hasgoodui.design
 color: "#202225"
