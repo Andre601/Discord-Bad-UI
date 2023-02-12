@@ -1,6 +1,6 @@
 ---
 title: Discord's new Brand redesign
-date: 2021-05-13 00:00:00 0000
+date: 2021-05-13 01:48:00 0100
 submitter: Andre601
 tags:
   - website

@@ -1,6 +1,6 @@
 ---
 title: Messages can have a bugged (edited) text position
-date: 2023-02-12 00:00:00 0000
+date: 2023-02-12 13:11:00 0100
 submitter: Andre601
 tags:
   - desktop
