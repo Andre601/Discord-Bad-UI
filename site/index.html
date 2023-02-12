@@ -11,7 +11,7 @@ layout: default
       {{ step.title }} <a href="#{{ step.slug }}">{% octicon link height:24 %}</a>
     </h3>
     <div class="card-author">
-      Submitted by {{ step.submitter }} | {{ step.date | date: '%d/%m/%Y'}}
+      Submitted by {{ step.submitter }} | <div title="Dates are formatted as dd/MM/YYYY">{{ step.date | date: '%d/%m/%Y'}}</div>
     </div>
     <hr>
     <p>
