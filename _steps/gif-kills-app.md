@@ -1,6 +1,6 @@
 ---
 title: Android app gets slowed down by gifs
-date: 2022-12-17 00:00:00 0000
+date: 2022-12-17 01:48:00 0100
 submitter: Andre601
 tags:
   - mobile

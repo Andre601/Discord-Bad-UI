@@ -1,6 +1,6 @@
 ---
 title: Bug allows postings of empty messages with embeds.
-date: 2023-02-12 00:00:00 0000
+date: 2023-02-12 12:37:00 0100
 submitter: Andre601
 tags:
   - desktop

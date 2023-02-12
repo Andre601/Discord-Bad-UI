@@ -1,6 +1,6 @@
 ---
 title: Inconsistent Emojis in Channel name
-date: 2022-12-23 00:00:00 0000
+date: 2022-12-23 16:46:00 0100
 submitter: Andre601
 tags:
   - mobile
