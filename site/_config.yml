@@ -4,8 +4,8 @@ collections:
   posts:
     title: Posts
     output: true
-  steps:
-    title: Steps
+  entries:
+    title: Entries
     output: false
   uploads:
     title: Uploads

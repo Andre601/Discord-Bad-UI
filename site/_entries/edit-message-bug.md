@@ -8,5 +8,8 @@ tags:
 
 Using a [specific Website](https://lingojam.com/Discord(edited)Glitch) someone can create a bugged "edited" message where the position of the `(edited)` tag is moved to wherever in the new message you set it.
 
-![bugged (edited) position](/assets/images/edit-bug/normal-message.jpg "The message before it was edited.")
-![bugged (edited) position](/assets/images/edit-bug/bugged-message.jpg "The edited message using the content provided by the aforementioned website.")
+[![normal message]][normal message]  
+[![edited message]][edited message]
+
+[normal message]: /assets/images/edit-bug/normal-message.jpg "The message before it was edited."
+[edited message]: /assets/images/edit-bug/bugged-message.jpg "The edited message using the content provided by the aforementioned website."

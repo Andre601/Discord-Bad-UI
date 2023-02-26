@@ -2,23 +2,23 @@
 layout: default
 ---
 
-{% assign steps = site.steps | sort: 'date' %}
-{% for step in steps reversed %}
+{% assign entries = site.entries | sort: 'date' %}
+{% for entry in entries reversed %}
 <div class="item">
   <i class="vertical-line"></i>
   <div class="card-panel">
-    <h3 class="card-title" id="{{ step.slug }}">
-      {{ step.title }} <a href="#{{ step.slug }}">{% octicon link height:24 %}</a>
+    <h3 class="card-title" id="{{ entry.slug }}">
+      {{ entry.title }} <a href="#{{ entry.slug }}">{% octicon link height:24 %}</a>
     </h3>
     <div class="card-author">
-      Submitted by {{ step.submitter }} | <div title="Dates are formatted as dd/MM/YYYY and are CET/CEST">{{ step.date | date: '%d/%m/%Y'}}</div>
+      Submitted by {{ entry.submitter }} | <div title="Dates are formatted as dd/MM/YYYY and are CET/CEST">{{ entry.date | date: '%d/%m/%Y'}}</div>
     </div>
     <hr>
     <p>
-      {{ step.content }}
+      {{ entry.content }}
     </p>
     <p>
-      {% assign tags = step.tags %}
+      {% assign tags = entry.tags %}
       {% for tag in tags -%}
         {% if forloop.first %}
           {% octicon tag height:24 %}
