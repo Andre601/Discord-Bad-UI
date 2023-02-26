@@ -11,7 +11,7 @@ layout: default
       {{ entry.title }} <a href="#{{ entry.slug }}">{% octicon link height:24 %}</a>
     </h3>
     <div class="card-author">
-      Submitted by {{ entry.submitter }} | <div title="Dates are formatted as dd/MM/YYYY and are CET/CEST">{{ entry.date | date: '%d/%m/%Y'}}</div>
+      Submitted by {{ entry.submitter }} | <span title="Date Format: dd/MM/yyyy (Timezone: CET/CEST)">{{ entry.date | date: '%d/%m/%Y'}}</span>
     </div>
     <hr>
     <p>
