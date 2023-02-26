@@ -1,7 +1,7 @@
 {% assign rawtags = "" %}
-{% assign steps = site.steps %}
-{% for step in steps %}
-  {% assign ttags = step.tags | join:'|' | append:'|' %}
+{% assign entries = site.entries %}
+{% for entry in entries %}
+  {% assign ttags = entry.tags | join:'|' | append:'|' %}
   {% assign rawtags = rawtags | append:ttags %}
 {% endfor %}
 
