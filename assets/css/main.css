@@ -181,6 +181,14 @@ svg {
     vertical-align: middle;
 }
 
+code {
+    padding: 3px 5px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 85%;
+    background-color: #2C2D30;
+}
+
 /* Classes */
 
 .grid-child {
