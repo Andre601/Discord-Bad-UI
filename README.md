@@ -1,4 +1,4 @@
-# discord.hasgoodui.design
+# [discord.hasgoodui.design][website]
 > Just FYI: The Domain is meant to be in a sarcastic tone...
 
 Website to list the past and current UI design decisions made by Discord that can at the very least be considered questionable.
@@ -11,12 +11,15 @@ The [issue tracker][issues] is used for submitting entries.
 Note that you don't have to only submit current/new design fails. Ones made in the past can also be submitted, will be added (when accepted) and automatically inserted into the page.
 
 ## Credits
-This page uses the [Jekyll-timeline theme][theme] from [lukas-h]. Smaller modifications have been made to the design, but it is otherwise the same.
 
-The website is inspired by the "[Twitter is Going Great!][tigg]" Website, go check them out!
+- Page build using [Jekyll][jekyll] and the [Jekyll Timeline Theme][theme]
+- SVG icons used from [GitHub's Octicons][octicons]
+- Website inspired by [Twitter is going great!][tigg]
 
-<!-- links -->
-[issues]: https://github.com/hasgoodui-design/Discord/issues
+[website]: https://discord.hasgoodui.design
+[issues]: https://github.com/hasgoodui-design/Actually-good-UI/issues
+[we-are]: https://we-are.hasgoodui.design
+[jekyll]: https://jekyllrb.com/
 [theme]: https://github.com/lukas-h/jekyll-timeline
-[lukas-h]: https://github.com/lukas-h
+[octicons]: https://primer.style/octicons
 [tigg]: https://twitterisgoinggreat.com
