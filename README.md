@@ -11,12 +11,13 @@ The [issue tracker][issues] is used for submitting entries.
 Note that you don't have to only submit current/new design fails. Ones made in the past can also be submitted, will be added (when accepted) and automatically inserted into the page.
 
 ## Credits
-This page uses the [Jekyll-timeline theme][theme] from [lukas-h]. Smaller modifications have been made to the design, but it is otherwise the same.
+This page uses [MkDocs] with the [Material for MkDocs theme][theme]. Timeline design is copied from [Neoteroi/mkdocs-plugins][mkdocs-plugin]'s timeline extension.
 
 The website is inspired by the "[Twitter is Going Great!][tigg]" Website, go check them out!
 
 <!-- links -->
 [issues]: https://github.com/hasgoodui-design/Discord/issues
-[theme]: https://github.com/lukas-h/jekyll-timeline
-[lukas-h]: https://github.com/lukas-h
+[mkdocs]: https://www.mkdocs.org
+[theme]: https://github.com/squidfunk/mkdocs-material
+[mkdocs-plugin]: https://github.com/Neoteroi/mkdocs-plugins
 [tigg]: https://twitterisgoinggreat.com

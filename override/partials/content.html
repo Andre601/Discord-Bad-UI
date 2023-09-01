@@ -1,0 +1,68 @@
+<!-- Tags -->
+{% if "material/tags" in config.plugins and tags %}
+  {% include "partials/tags.html" %}
+{% endif %}
+
+<!-- Actions -->
+{% include "partials/actions.html" %}
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+{% if "\x3ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+
+<!-- Page content -->
+{{ page.content }}
+
+{% if page.meta.timeline %}
+  <div class="nt-timeline vertical left">
+    <div class="nt-timeline-before"></div>
+    <div class="nt-timeline-items">
+      {% for item in page.meta.timeline %}
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="{{ item.slug | lower() }}">
+            {{ item.title }}<a href="#{{ item.slug | lower() }}" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">{{ item.sub_title }}</span>
+          <p class="nt-timeline-content">
+            {{ item.content }}
+            {% if item.images %}
+              <br>
+              <br>
+              {% for img in item.images %}
+                <img src="{{ img.src }}" alt="{{ img.alt }}" title="{{ img.title }}" loading="lazy">
+                
+                {% if loop.revindex > 1 %}<br>{% endif %}
+              {% endfor %}
+          {% endif %}
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                {% include ".icons/" ~ item.icon ~ ".svg" %}
+              </span>
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="nt-timeline-after"></div>
+  </div>
+{% endif %}
+
+<!-- Source file information -->
+{% if page.meta and (
+  page.meta.git_revision_date_localized or
+  page.meta.revision_date
+) %}
+  {% include "partials/source-file.html" %}
+{% endif %}
+
+<!-- Was this page helpful? -->
+{% include "partials/feedback.html" %}
+
+<!-- Comment system -->
+{% include "partials/comments.html" %}

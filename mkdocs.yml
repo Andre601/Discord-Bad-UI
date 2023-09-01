@@ -1,0 +1,37 @@
+site_name: Discord has good UI design.
+site_description: 'Website listing the "great" Designs Discord made. Inspired by twitterisgoinggreat.com'
+site_author: 'hasgoodui.design-team'
+site_url: 'https://discord.hasgoodui.design'
+
+copyright: |
+  Website listing the bad UI designs made by <a href="https://discord.com" target="_blank" rel="nofollow noopener noreferrer">Discord Inc.</a><br>
+  Concept inspired by <a href="https://twitterisgoinggreat.com" target="_blank" rel="nofollow noopener noreferrer">Twitter is going great</a>.
+
+nav:
+  - Home: index.md
+
+watch:
+  - override
+
+theme:
+  name: material
+  custom_dir: override
+  logo: assets/images/favicons/android-chrome-512x512.png
+  palette:
+    scheme: slate
+
+plugins:
+  - glightbox
+
+markdown_extensions:
+  - md_in_html
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/discord-theme.css

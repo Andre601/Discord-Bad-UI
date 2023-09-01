@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block site_meta %}
+  {{ super() }}
+
+  <link rel="icon" href="{{ '/assets/images/favicons/android-chrome-512x512.png' | url }}" />
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' | url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' | url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' | url }}">
+  <link rel="manifest" href="{{ '/assets/images/favicons/site.webmanifest' | url }}">
+  
+  <meta name="twitter:title" content="{{ config.site_name }}" />
+  <meta name="twitter:description" content="{{ config.site_description | e }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="{{ config.site_author }}" />
+  <meta name="twitter:image" content="{{ '/assets/images/favicon/android-chrome-512x512.png' | url }}" />
+{% endblock %}

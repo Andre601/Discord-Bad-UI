@@ -6,7 +6,8 @@ on:
       - master
     paths:
       - '.github/workflows/publish-site.yml'
-      - 'site/**'
+      - 'docs/**'
+      - 'override/**'
 
 jobs:
   deploy:
@@ -17,10 +18,12 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
           cname: discord.hasgoodui.design
-          enable_jekyll: true
