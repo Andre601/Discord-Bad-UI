@@ -9,6 +9,7 @@ on:
       - 'docs/**'
       - 'override/**'
       - 'requirements.txt'
+      - 'mkdocs.yml'
 
 jobs:
   deploy:
