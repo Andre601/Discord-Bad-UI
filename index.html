@@ -1,35 +1,525 @@
----
-layout: default
----
 
-{% assign entries = site.entries | sort: 'date' %}
-{% for entry in entries reversed %}
-<div class="item">
-  <i class="vertical-line"></i>
-  <div class="card-panel">
-    <h3 class="card-title" id="{{ entry.slug }}">
-      {{ entry.title }} <a href="#{{ entry.slug }}">{% octicon link height:24 %}</a>
-    </h3>
-    <div class="card-author">
-      Submitted by {{ entry.submitter }} | <span title="Date Format: dd/MM/yyyy (Timezone: CET/CEST)">{{ entry.date | date: '%d/%m/%Y'}}</span>
-    </div>
-    <hr>
-    <p>
-      {{ entry.content }}
-    </p>
-    <p>
-      {% assign tags = entry.tags %}
-      {% for tag in tags -%}
-        {% if forloop.first %}
-          {% octicon tag height:24 %}
-        {% endif %}
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+  
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <a href="{{ site.baseurl }}/tags/{{ tag }}">#{{ tag }}</a>{% unless forloop.last %} | {% endunless -%}
-      {% endfor %}
-    </p>
+        <meta name="description" content="Website listing the "great" Designs Discord made. Inspired by twitterisgoinggreat.com">
+      
+      
+        <meta name="author" content="hasgoodui.design-team">
+      
+      
+        <link rel="canonical" href="https://discord.hasgoodui.design/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.6">
+    
+
+  <link rel="icon" href="/assets/images/favicons/android-chrome-512x512.png" />
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+  
+  <meta name="twitter:title" content="Discord has good UI design." />
+  <meta name="twitter:description" content="Website listing the &#34;great&#34; Designs Discord made. Inspired by twitterisgoinggreat.com" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="hasgoodui.design-team" />
+  <meta name="twitter:image" content="/assets/images/favicon/android-chrome-512x512.png" />
+
+    
+      
+        <title>Discord has good UI design.</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/discord-theme.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Discord has good UI design." class="md-header__button md-logo" aria-label="Discord has good UI design." data-md-component="logo">
+      
+  <img src="assets/images/favicons/android-chrome-512x512.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Discord has good UI design.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Discord has good UI design." class="md-nav__button md-logo" aria-label="Discord has good UI design." data-md-component="logo">
+      
+  <img src="assets/images/favicons/android-chrome-512x512.png" alt="logo">
+
+    </a>
+    Discord has good UI design.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!-- Tags -->
+
+
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+
+
+<!-- Page content -->
+<h1 style="text-align: center;">Discord has good UI design</h1>
+
+<p>This website lists all the "great" design decisions made by Discord in the past and even now.<br />
+Note that the goal is not to attack anyone at Discord, but to simply show and poke fun at the mistakes they make.</p>
+<p>Concept is inspired by the (Now sunsetted) website <a href="https://twitterisgoinggreat.com" rel="nofollow noopener noreferral" target="_blank">Twitter is going great!</a>.</p>
+<p><center></p>
+<p><a class="md-button md-button--discord" href="https://github.com/hasgoodui-design/discord/issues"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg></span> Submit new Entry</a></p>
+<p></center></p>
+<hr />
+
+
+  <div class="nt-timeline vertical left">
+    <div class="nt-timeline-before"></div>
+    <div class="nt-timeline-items">
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="embed-size-issues">
+            Embeds display way larger than their content<a href="#embed-size-issues" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">27/02/2023</span>
+          <p class="nt-timeline-content">
+            Using the Android App, Embeds may show with a much larger height than the content itself.
+
+            
+              <br>
+              <br>
+              
+                <img src="assets/images/embed-sizes/embed-size.jpg" alt="embed-size" title="An embed from a Discord Webhook Message with a height that is much larger than the actual content the embed has." loading="lazy">
+                
+                
+              
+          
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 19H7V5h10m0-4H7c-1.11 0-2 .89-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="bugged-edited-message">
+            Messages can have a bugged <code>(edited)</code> text position<a href="#bugged-edited-message" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">12/02/2023</span>
+          <p class="nt-timeline-content">
+            Using a <a href="https://lingojam.com/Discord(edited)Glitch" target="_blank" rel="nofollow noopener noreferral">specific website</a> someone can create a bugged <code>(edited)</code> tag, where its position is moved to wherever you put the "(edited)" text in the site.
+            
+              <br>
+              <br>
+              
+                <img src="assets/images/edit-bug/normal-message.jpg" alt="normal-message" title="The message before it was edited." loading="lazy">
+                
+                <br>
+              
+                <img src="assets/images/edit-bug/bugged-message.jpg" alt="bugged-message" title="The edited message using the content provided by the aforementioned site for the bugged (edited) text." loading="lazy">
+                
+                
+              
+          
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="empty-message-bug">
+            Bug allows posting of empty messages with embeds.<a href="#empty-message-bug" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">12/02/2023</span>
+          <p class="nt-timeline-content">
+            Using a <a href="https://pastebin.com/NLxd4pg0" target="_blank" rel="nofollow noopener noreferral">specific combination of spoilers and underlines</a> allows you to post an empty text. Posting links that way will still render embed, making it look like you used a form of automation or API access to post embeds without message content.
+            
+              <br>
+              <br>
+              
+                <img src="assets/images/link-embed-bug/empty-message-text.jpg" alt="empty-message-text" title="The text used to post an empty message. Everything after the _ is hidden." loading="lazy">
+                
+                <br>
+              
+                <img src="assets/images/link-embed-bug/empty-message.jpg" alt="empty-message" title="The result with the non-visible link causing an embed to appear, making it look like I used client modifications" loading="lazy">
+                
+                
+              
+          
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="invisible-code-blocks">
+            Codeblock barely noticable on Mobile<a href="#invisible-code-blocks" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">12/02/2023</span>
+          <p class="nt-timeline-content">
+            On the Mobile version of Discord are Code blocks (or inline code) barely noticable. The only thing is a thin outline for the code block and a slightly different monospaced font.
+            
+              <br>
+              <br>
+              
+                <img src="assets/images/codeblock-issue/codeblock-issue.jpg" alt="codeblock-issue.jpg" title="Screenshot showing an embed with a code block where only the outline and a monospaced font is noticable." loading="lazy">
+                
+                
+              
+          
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 19H7V5h10m0-4H7c-1.11 0-2 .89-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="inconsistent-emojis">
+            Inconsistent Emojis in Channel names<a href="#inconsistent-emojis" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">23/12/2022</span>
+          <p class="nt-timeline-content">
+            A long standing issue in Discord is, that emojis are inconsistent when used in channel names, as Discord is using the Unicode version instead of the Twemoji version they usually use in the chats messages.<br>
+<br>
+This exists since basically the start and <a href="https://www.reddit.com/r/discordapp/comments/ztej0n/why_does_discord_change_some_emojis_in_channel/" target="_blank" rel="nofollow noopener noreferral">still confuses people to this day</a>.
+            
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="android-app-slowed-down-by-gif">
+            Android app gets slowed down by gifs<a href="#android-app-slowed-down-by-gif" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">17/12/2022</span>
+          <p class="nt-timeline-content">
+            In a more recent update of the Android app can certain gifs cause the app to slow down (lag) significantly, while also <a href="https://twitter.com/TrueAndre_601/status/1603794219713560576" target="_blank" rel="nofollow noopener noreferral">making the phone heat up</a>.<br>
+<br>
+In addition is the a11y (accessability) setting for auto-playing gifs ignored for gifs inside embeds, resulting in gifs playing while the setting is set to "off".
+            
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 19H7V5h10m0-4H7c-1.11 0-2 .89-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="android-switch-to-react">
+            Discord changes Android App from Java/Kotlin to react<a href="#android-switch-to-react" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">24/08/2022</span>
+          <p class="nt-timeline-content">
+            Discord has changed their Android app from being made in Java/Kotlin to be made with React.<br>
+The main reason was to remove the gap between the iOS and Android app to have a single team working on both platforms.<br>
+<br>
+The result howver, was a <a href="https://www.reddit.com/r/discordapp/comments/ww49wj/my_issues_with_the_reactbased_android_app/" target="_blank" rel="nofollow noopener noreferral">huge collection of bugs</a> that could be encountered without any provocation on your end. Some of them still exist to this day and <a href="https://twitter.com/TrueAndre_601/status/1603794219713560576" target="_blank" rel="nofollow noopener noreferral">new ones are encountered too</a>.
+            
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 19H7V5h10m0-4H7c-1.11 0-2 .89-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+        <div class="nt-timeline-item">
+          <h3 class="nt-timeline-title" id="discord-brand-redesign">
+            Discord's new Brand redesign<a href="#discord-brand-redesign" class="headerlink" title="Permanent">¶</a>
+          </h3>
+          <span class="nt-timeline-sub-title">13/05/2021</span>
+          <p class="nt-timeline-content">
+            On the 13th of May did <a href="https://discord.com/blog/happy-blurpthday-to-discord-a-place-for-everything-you-can-imagine" target="_blank" rel="nofollow noopener noreferral">Discord announce their new redesign</a>, which included changes to a lot of things, such as their Logo called "clyde" and even the Watermark.<br>
+This decision encountered quite a bit of backlash including complains about <a href="https://support.discord.com/hc/en-us/community/posts/1500001050842-New-layout-extremely-hostile-towards-people-with-disabilities" target="_blank" rel="nofollow noopener noreferral">possible a11y issues</a> with the new contrasts and colour schemes.
+            
+          </p>
+          <div class="nt-timeline-dot bigger">
+            <span class="icon">
+              <span class="twemoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+              </span>
+            </span>
+          </div>
+        </div>
+      
+    </div>
+    <div class="nt-timeline-after"></div>
   </div>
+
+
+<!-- Source file information -->
+
+
+<!-- Was this page helpful? -->
+
+
+  
+
+
+
+<!-- Comment system -->
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Website listing the bad UI designs made by <a href="https://discord.com" target="_blank" rel="nofollow noopener noreferrer">Discord Inc.</a><br>
+Concept inspired by <a href="https://twitterisgoinggreat.com" target="_blank" rel="nofollow noopener noreferrer">Twitter is going great</a>.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-{% endfor %}
-<div class="last-item">
-  <i class="vertical-line"></i>
-</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
