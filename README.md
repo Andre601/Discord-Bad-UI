@@ -1,4 +1,4 @@
-# discord.hasgoodui.design
+# [discord.hasgoodui.design][website]
 > Just FYI: The Domain is meant to be in a sarcastic tone...
 
 Website to list the past and current UI design decisions made by Discord that can at the very least be considered questionable.
@@ -12,8 +12,6 @@ Note that you don't have to only submit current/new design fails. Ones made in t
 
 ## Credits
 This page uses [MkDocs] with the [Material for MkDocs theme][theme]. Timeline design is copied from [Neoteroi/mkdocs-plugins][mkdocs-plugin]'s timeline extension.
-
-The website is inspired by the "[Twitter is Going Great!][tigg]" Website, go check them out!
 
 <!-- links -->
 [issues]: https://github.com/hasgoodui-design/Discord/issues

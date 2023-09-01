@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Website
+    about: The website build from this Repository.
+    url: https://discord.hasgoodui.design
+  - name: Discord Server
+    about: Our Discord Server.
+    url: https://discord.gg/KhSpen6vtZ
+  - name: Revolt Server
+    about: Our Revolt Server.
+    url: https://rvlt.gg/ffwb4zy6
