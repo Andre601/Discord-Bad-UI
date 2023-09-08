@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {{ super() }}
+  
+  <div class="nt-timeline vertical left">
+    <div class="nt-timeline-before"></div>
+    <div class="nt-timeline-items">
+      {% for page in nav.pages|rejectattr("meta", "undefined")|rejectattr("meta.weight", "undefined")|sort(attribute="meta.weight", reverse=True) %}
+        {% if page.url.startswith("posts/") %}
+          <div class="nt-timeline-item">
+            <h3 class="nt-timeline-title">
+              <a href="{{ page.url | url }}">{{ page.title }}</a>
+            </h3>
+            <span class="nt-timeline-sub-title">{{ page.meta.date.strftime("%d/%m/%Y") }}</span>
+            <div class="nt-timeline-content">
+              {{ page.content }}
+              <details class="tags">
+                <summary>Tags:</summary>
+                <p>
+                  {% for tag in page.meta.tags %}
+                    <a href="/tags/#{{ tag }}" class="md-button md-button--discord">#{{ tag }}</a>
+                  {% else %}
+                    <i>No tags provided</i>
+                  {% endfor %}
+                </p>
+              </details>
+            </div>
+            <div class="nt-timeline-dot bigger">
+              <span class="icon">
+                <span class="twemoji">
+                  {% include ".icons/" ~ page.meta.timeline_icon ~ ".svg" %}
+                </span>
+              </span>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="nt-timeline-after"></div>
+  </div>
+{% endblock %}

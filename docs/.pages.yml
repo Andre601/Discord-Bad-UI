@@ -1,0 +1,11 @@
+sort_type: natural
+order_by: filename
+
+order: desc
+
+nav:
+  - Home: index.md
+  - Posts:
+    - ... | posts/*.md
+  - Tags:
+    - ... | tags/*.md

@@ -7,8 +7,6 @@ copyright: |
   Website listing the bad UI designs made by <a href="https://discord.com" target="_blank" rel="nofollow noopener noreferrer">Discord Inc.</a><br>
   Concept inspired by <a href="https://twitterisgoinggreat.com" target="_blank" rel="nofollow noopener noreferrer">Twitter is going great</a>.
 
-nav:
-  - Home: index.md
 
 watch:
   - override
@@ -22,10 +20,15 @@ theme:
 
 plugins:
   - glightbox
+  - awesome-pages
+  - tags:
+      enabled: true
+      tags_file: tags/index.md
 
 markdown_extensions:
   - md_in_html
   - attr_list
+  - meta
   - toc:
       permalink: true
   - pymdownx.emoji:
@@ -35,3 +38,8 @@ markdown_extensions:
 extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/discord-theme.css
+
+extra:
+  social:
+    - icon: simple/github
+      link: 'https://github.com/hasgoodui-design'

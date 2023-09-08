@@ -16,3 +16,20 @@
   <meta name="twitter:creator" content="{{ config.site_author }}" />
   <meta name="twitter:image" content="{{ '/assets/images/favicon/android-chrome-512x512.png' | url }}" />
 {% endblock %}
+
+{% block content %}
+  {% if not page.is_homepage %}
+    <div class="admonition tags">
+      <div class="admonition-title">Tags:</div>
+      <p>
+        {% for tag in page.meta.tags %}
+          <a href="/tags/#{{ tag }}" class="md-button md-button--discord">#{{ tag }}</a>
+        {% else %}
+          <i>No tags provided</i>
+        {% endfor %}
+      </p>
+    </div>
+    <hr>
+  {% endif %}
+  {{ page.content }}
+{% endblock %}
