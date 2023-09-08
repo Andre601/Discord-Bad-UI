@@ -1,3 +1,8 @@
+---
+ignore:
+  - tags
+---
+
 # Tags
 
 [TAGS]

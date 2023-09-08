@@ -18,7 +18,7 @@
 {% endblock %}
 
 {% block content %}
-  {% if not page.is_homepage %}
+  {% if not page.is_homepage and not "tags" in page.meta.ignore %}
     <div class="admonition tags">
       <div class="admonition-title">Tags:</div>
       <p>
@@ -30,6 +30,9 @@
       </p>
     </div>
     <hr>
+  {% endif %}
+  {% if not page.is_homepage %}
+    <h1>{{ page.title }}</h1>
   {% endif %}
   {{ page.content }}
 {% endblock %}
