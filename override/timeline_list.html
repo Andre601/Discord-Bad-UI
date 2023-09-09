@@ -13,6 +13,7 @@
               <a href="{{ page.url | url }}">{{ page.title }}</a>
             </h3>
             <span class="nt-timeline-sub-title">{{ page.meta.date.strftime("%d/%m/%Y") }}</span>
+            <blockquote>Submitted by: {{ page.meta.submitted | d('<i>Unknown</i>') }}</blockquote>
             <div class="nt-timeline-content">
               {{ page.content }}
               <details class="tags">
@@ -29,7 +30,7 @@
             <div class="nt-timeline-dot bigger">
               <span class="icon">
                 <span class="twemoji">
-                  {% include ".icons/" ~ page.meta.timeline_icon ~ ".svg" %}
+                  {% include ".icons/" ~ page.meta.timeline_icon|d('octicons/dot-24') ~ ".svg" %}
                 </span>
               </span>
             </div>

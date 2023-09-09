@@ -7,6 +7,7 @@ timeline_icon: material/pencil
 tags:
   - desktop
   - appearance
+submitted: Andre601
 ---
 
 Using a [specific website](https://lingojam.com/Discord(edited)Glitch){ target="_blank" rel="nofollow noopener noreferral" } someone can create a bugged `(edited)` tag, where its position is moved to wherever you put the "(edited)" text in the site.

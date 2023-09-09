@@ -7,6 +7,7 @@ timeline_icon: material/cellphone
 tags:
   - android
   - appearance
+submitted: Andre601
 ---
 
 On the Mobile version of Discord are Code blocks (or inline code) barely noticable. The only thing is a thin outline for the code block and a slightly different monospaced font.

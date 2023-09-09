@@ -8,6 +8,7 @@ tags:
   - android
   - ios
   - desktop
+submitted: Andre601
 ---
 
 A long standing issue in Discord are unicode emojis in channel names. When used in a channel name will Discord display the raw unicode version of that emoji, rather than display the twemoji version they use within chat messages. This causes emojis to look completely different depending from what device you look at them.

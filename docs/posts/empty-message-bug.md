@@ -6,6 +6,7 @@ timeline_icon: material/pencil
 tags:
   - desktop
   - appearance
+submitted: Andre601
 ---
 
 Using the Android App, Embeds may show with a much larger height than the content itself.

@@ -5,7 +5,8 @@
 :root, [data-md-color-scheme="discord"] {
     --md-default-bg-color: #202225;
     --md-default-fg-color: #dcddde;
-    --md-default-fg-color--light: #dcddde;
+    --md-default-fg-color--light: #2C2D30;
+    --md-default-fg-color--lighter: #9e9e9e;
     --md-default-fg-color--lightest: #dcddde;
     
     --md-primary-fg-color: #7388d9;
@@ -16,6 +17,15 @@
     
     --md-button-fg-color: #7388d9;
     --md-button-bg-color: #7388d91a;
+}
+
+.md-typeset h1 {
+    color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset blockquote {
+    border-color: var(--md-default-fg-color--light) !important;
+    color: var(--md-default-fg-color--lighter);
 }
 
 .md-button--discord {

@@ -7,6 +7,7 @@ timeline_icon: material/cellphone
 tags:
   - android
   - a11y
+submitted: Andre601
 ---
 
 In a more recent update of the Android App can certain gifs cause the App to slow down (lag) significantly, while also [causing your smartphone to heat up][smartphone-heats-uo]{ target="_blank" rel="nofollow noopener noreferral" }.

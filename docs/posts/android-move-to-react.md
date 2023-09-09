@@ -6,6 +6,7 @@ date: 2022-08-24
 timeline_icon: material/cellphone
 tags:
   - android
+submitted: Andre601
 ---
 
 Discord has changed their Android App from originally being made in Java/Kotlin, to be made with React now.<br>

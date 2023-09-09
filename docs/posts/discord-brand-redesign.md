@@ -6,6 +6,7 @@ date: 2021-05-13
 timeline_icon: simple/discord
 tags:
   - appearance
+submitted: Andre601
 ---
 
 On the 13th of May 2021 did Discord [announce their new redesign][blog-post]{ target="_blank" rel="nofollow noopener noreferral" }, which included changes to a lot of things including their logo called "Clyde", their Watermark and colours used.<br>
