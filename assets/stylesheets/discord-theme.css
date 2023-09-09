@@ -28,6 +28,14 @@
     color: var(--md-default-fg-color--lighter);
 }
 
+.md-nav__title {
+    color: var(--md-default-fg-color--lighter);
+}
+
+.md-nav__link--passed {
+    color: var(--md-default-fg-color--lighter);
+}
+
 .md-button--discord {
     color: var(--md-default-fg-color) !important;
     border-color: var(--md-button-fg-color) !important;
