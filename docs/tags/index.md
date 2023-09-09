@@ -1,8 +1,7 @@
 ---
+title: Tags
 ignore:
   - tags
 ---
-
-# Tags
 
 [TAGS]
