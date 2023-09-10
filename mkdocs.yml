@@ -42,6 +42,9 @@ extra_css:
   - assets/stylesheets/extra.css
   - assets/stylesheets/discord-theme.css
 
+extra_javascript:
+  - assets/js/randomized_subtitle.js
+
 extra:
   social:
     - icon: simple/github

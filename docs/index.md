@@ -9,7 +9,9 @@ hide:
   - toc
 ---
 
-# :simple-discord: Discord has good UI Design { style="text-align: center;" }
+# :simple-discord: Discord has good UI Design { style="text-align: center; margin-bottom: 0;" }
+
+<h2 style="text-align: center; margin-top: 0; margin-bottom: 2rem;" data-md-component="random-subtitle"></h2>
 
 This website lists all the "great" design decisions made by Discord in the past and even now.  
 Note that the goal is not to attack anyone at Discord, but to simply show and poke fun at the mistakes they make.
